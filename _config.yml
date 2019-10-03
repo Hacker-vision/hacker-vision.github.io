@@ -82,7 +82,7 @@ reward_description: 如果你觉得本文对你有帮助，不妨请我喝杯咖
 
 # --- 评论设置 ---
 # 开启评论，取消下面一行注解，并填写相应评论运营商提供的 id，目前仅支持来必力和 gitment
-comment: true
+comment: 
 # 来必力 uid
 # livere_uid:
 # gitment 用户主，即 GitHub 用户名
