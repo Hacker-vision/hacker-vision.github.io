@@ -20,6 +20,7 @@ Email: ajksunkang@pku.edu.cn
 * [零壹与或非](http://blog.sciencenet.cn/home.php?mod=space&uid=102148) - 佟冬，导师，《处理器指令系统漫谈》、《要草吃的聪明羊》
 * [当我在扯淡](http://www.yinwang.org/) - 王垠，《完全用Linux工作》，推广TeX、三次中途退学博士学位
 * [快扶哀家去刷题](https://www.cnblogs.com/miaowTracy/) - 实验室喵喵大佬
+* [Mengjia Yan](http://myan8.web.engr.illinois.edu/research.html) - A PhD student doing research in hardware support for security @ UIUC.
 
 ## 关于本站
 
