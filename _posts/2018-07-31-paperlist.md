@@ -12,7 +12,7 @@ excerpt: 读研期间所读paper阅读总结汇总，包含领域：体系结构
 
 [2019.MICRO.Practical Byte-Granular Memory Blacklisting using Califorms](http://www.cs.columbia.edu/~simha/preprint_micro19_califorms.pdf)
 
-&#160; &#160; &#160; &#160;Califorms是一种基于黑名单的细粒度内存安全解决方案，能够解决sub-object问题。sub-oject问题是因为C/C++中结构体、class类内指针对象越界访问造成的缓冲区溢出，进而引发type-confusion等问题。Cliforms是在REST基础上，在结构体指针上下添加随机大小的安全字节，然后修改了L1、L2 cache的结构消除了ASAN的shadow memory的内存开销。技术细节上，简单来说，(1)Adress Sanitizer = redzones + shadow memory,(2)REST = token + 1 L1 $D token bit（3）Califorms = security bytes + L1 bit vector / L2 sentinel. 
+&#160; &#160; &#160; &#160;Califorms是一种基于黑名单的细粒度内存安全解决方案，能够解决sub-object问题。sub-oject问题是因为C/C++中结构体、class类内指针对象越界访问造成的缓冲区溢出，进而引发type-confusion等问题。Califorms是在REST基础上，在结构体指针上下添加随机大小的安全字节，然后修改了L1、L2 cache的结构消除了ASAN的shadow memory的内存开销。技术细节上，简单来说，(1)Adress Sanitizer = redzones + shadow memory,(2)REST = token + 1 L1 $D token bit（3）Califorms = security bytes + L1 bit vector / L2 sentinel. 对标论文，2018 PLDI的EffectiveSan.
 
 
 [2015.Usenix.Control-Flow Bending: On the Effectiveness of Control-Flow Integrity](https://github.com/Hacker-vision/Tutorials/tree/master/1-paper)
