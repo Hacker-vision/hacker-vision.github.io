@@ -10,6 +10,11 @@ excerpt: 读研期间所读paper阅读总结汇总，包含领域：体系结构
 
 计算机安全四大顶会：NDSS、SP、Usenix Security、CCS
 
+[2019.MICRO.Practical Byte-Granular Memory Blacklisting using Califorms](http://www.cs.columbia.edu/~simha/preprint_micro19_califorms.pdf)
+
+&#160; &#160; &#160; &#160;Califorms是一种基于黑名单的细粒度内存安全解决方案，能够解决sub-object问题。sub-oject问题是因为C/C++中结构体、class类内指针对象越界访问造成的缓冲区溢出，进而引发type-confusion等问题。Cliforms是在REST基础上，在结构体指针上下添加随机大小的安全字节，然后修改了L1、L2 cache的结构消除了ASAN的shadow memory的内存开销。技术细节上，简单来说，(1)Adress Sanitizer = redzones + shadow memory,(2)REST = token + 1 L1 $D token bit（3）Califorms = security bytes + L1 bit vector / L2 sentinel. 
+
+
 [2015.Usenix.Control-Flow Bending: On the Effectiveness of Control-Flow Integrity](https://github.com/Hacker-vision/Tutorials/tree/master/1-paper)
 
 &#160; &#160; &#160; &#160;根据SOK-Eternal War in Memory，Memory Corruption(内存错误)是所有软件安全漏洞的根本来源，也是产生控制流劫持攻击的原因。传统的控制流劫持攻击是修改控制转移类的跳转目标指令，指向注入的攻击代码，这种攻击方式被DEP（data execution prevention）解决——每个内存页可读和可写不能同时满足；后来攻击方式采用了重用代码片段——gadget，将控制转移类指令的目标地址指向libc或者可执行程序中的代码片段，如果被重用的代码规模达到一定程度，就能够从攻击程序中找到图灵完备的代码片段，比如：JOP、ROP、Return-To-Libc攻击。目前的解决方式是CFI防御机制(2005年)，其核心思想是真实程序运行trace中的控制转移，必须始终处于原有的控制流图所限定的范围内。本文提出一种新型的printf攻击方式，攻击者可以绕过shadow stack,不修改return address仅仅通过修改函数调用传入的参数，便可以完成攻击者的目的，包括执行任意代码、执行受限代码和信息泄露。通过证明CFI策略的不完备性，指出要想真正解决控制流劫持攻击，还是要从源头Buffer Overflow上解决。
