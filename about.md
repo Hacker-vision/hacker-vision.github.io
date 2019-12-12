@@ -21,6 +21,9 @@ Email: ajksunkang@pku.edu.cn
 * [当我在扯淡](http://www.yinwang.org/) - 王垠，《完全用Linux工作》，推广TeX、三次中途退学博士学位
 * [快扶哀家去刷题](https://www.cnblogs.com/miaowTracy/) - 实验室喵喵大佬
 * [Mengjia Yan](http://myan8.web.engr.illinois.edu/research.html) - A PhD student doing research in hardware support for security @ UIUC.
+* [Yikun Ban / 班义琨](http://www.banyikun.com) - 2019 PhD student @ UIUC , 2016 M.S. @ MPRC
+* [Yale N. Patt](http://users.ece.utexas.edu/~patt/) Home page: Yale N. Patt @ The University of Texas at Austin
+* [Onur Mutlu](https://people.inf.ethz.ch/omutlu/) Onur Mutlu @ ETH Zurich
 
 ## 关于本站
 
