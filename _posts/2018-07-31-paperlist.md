@@ -11,6 +11,7 @@ excerpt: 读研期间所读paper阅读总结汇总，包含领域：体系结构
 计算机安全四大顶会：NDSS、SP、Usenix Security、CCS
 
 [2019.ASPLOS.BOGO: Buy Spatial Memory Safety, Get Temporal Memory Safety (Almost) Free](http://people.cs.vt.edu/dongyoon/papers/ASPLOS-19-BOGO.pdf)
+
 &#160; &#160; &#160; &#160;Intel MPX提供了一套基于查找表的空间内存安全解决方案，把越界检查用x86指令实现加速，时间开销仅有26%。在MPX的基础上，Bogo复用了其查找表（Bound Table），将时间安全的解决方案加进去，给出了一套完整的内存安全解决方案（时间+空间），正符合buy one, get one for free买一赠一的初衷。具体来说，每次遇到free指令，扫描整个查找表（Bound Table）进行界限的比较，如果有交叠（overlapping）该指针就为danggling pointer，BOGO将对应的表项置为无效表项，当下一次指针引用时，发现对应表项为无效，触发use-after-free异常。BOGO采用了基于页大小的cache机制，将全表扫描查找进行了优化，将时间开销降低到了60%,空间开销降低到36%,并对SPEC2006,NIST,CVEs,Bugbench,9个APPs做了正确性、安全性、敏感性、兼容性、抗压力和性能开销做了评测，实验做的非常全面。
 
 [2019.MICRO.Practical Byte-Granular Memory Blacklisting using Califorms](http://www.cs.columbia.edu/~simha/preprint_micro19_califorms.pdf)
