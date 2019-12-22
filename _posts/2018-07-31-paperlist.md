@@ -1,5 +1,5 @@
 ---
-title: "体系结构论文清单[已读]"
+title: "【置顶】体系结构论文清单(已读)"
 date: 2019-12-22 21:30:23 +0800
 category: Markdown
 tags: [Markdown, Minimalism]
