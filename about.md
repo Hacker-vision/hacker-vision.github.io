@@ -5,6 +5,13 @@ date: 2018-08-12 21:12:52 +0800
 reward: false
 ---
 
+本篇博客用作一些学习过程的记录，希望对自己、对别人有一些参考借鉴的意义。
+
+Github：[https://github.com/Hacker-vision](https://github.com/Hacker-vision)
+
+CSDN blog：[http://blog.csdn.net/u012717411](http://blog.csdn.net/u012717411)
+
+
 ## 友情链接 
 * [零壹与或非](http://blog.sciencenet.cn/home.php?mod=space&uid=102148) - 佟冬，导师，《处理器指令系统漫谈》、《要草吃的聪明羊》
 * [当我在扯淡](http://www.yinwang.org/) - 王垠，《完全用Linux工作》，推广TeX、三次中途退学博士学位
@@ -19,8 +26,4 @@ reward: false
 * [ACM Digital Library](https://dl.acm.org/) - ACM论文集检索
 
 
-本篇博客用作一些学习过程的记录，希望对自己、对别人有一些参考借鉴的意义。
 
-Github：[https://github.com/Hacker-vision](https://github.com/Hacker-vision)
-
-CSDN blog：[http://blog.csdn.net/u012717411](http://blog.csdn.net/u012717411)
