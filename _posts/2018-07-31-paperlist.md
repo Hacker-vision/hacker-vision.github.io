@@ -10,6 +10,10 @@ excerpt: 读研期间所读paper阅读总结汇总，包含领域：体系结构
 
 计算机安全四大顶会：NDSS、SP、Usenix Security、CCS
 
+[2017.arXiv.Intel MPX explained: An empirical study of intel MPX and software-based bounds checking approaches](https://arxiv.org/pdf/1702.00719.pdf)
+
+&#160; &#160; &#160; &#160; Intel Memory Protection Exection(MPX)是2013年首次提出的，并在2015年英特尔Skylake处理器中引入，2019年该处理器宣布退出市场。MPX提供了一套以SoftBound等纯软件解决空间内存安全方案为基础的硬件解决方案（以二级查找表的方式查找指针对应的元数据）：（I）硬件方案：添加越界指令bndcl/bndcu和边界寄存器；（II）操作系统：修改内核支持内存管理和异常检查；（III）编译和运行库：提供GCC/ICC/LLVM优化遍和wrapper；（IV）应用程序：给部分程序打补丁以支持MPX编译。最终获得了~50%的运行时开销。但MPX存在以下问题影响其在软件方面的部署：（1）MPX采用软硬件协同的技术减少纯软件的检查，但是运行时开销没有达到预期（只有~50%）（2）主流编译器支持不足：ICC/GCC对MPX支持远远不及ASAN （3）不支持多线程：MPX虽然插入了指令，但是无法保证ld/st pointer与之前读指针边界bndldx指令的原子性，期间可能插入bndstx指令修改指针边界导致越界检查出错（False Negative/False Positive）(4)MPX 目前不支持时间安全，不能解决UAF等问题；（5）对应用程序的兼容性不足：首先的内存布局等问题。虽然有上述不足，BOGO在此基础上解决了时间安全，MPX仍然有发展的空间。
+
 [2019.ASPLOS.BOGO: Buy Spatial Memory Safety, Get Temporal Memory Safety (Almost) Free](http://people.cs.vt.edu/dongyoon/papers/ASPLOS-19-BOGO.pdf)
 
 &#160; &#160; &#160; &#160;Intel MPX提供了一套基于查找表的空间内存安全解决方案，把越界检查用x86指令实现加速，时间开销仅有26%。在MPX的基础上，Bogo复用了其查找表（Bound Table），将时间安全的解决方案加进去，给出了一套完整的内存安全解决方案（时间+空间），正符合buy one, get one for free买一赠一的初衷。具体来说，每次遇到free指令，扫描整个查找表（Bound Table）进行界限的比较，如果有交叠（overlapping）该指针就为danggling pointer，BOGO将对应的表项置为无效表项，当下一次指针引用时，发现对应表项为无效，触发use-after-free异常。BOGO采用了基于页大小的cache机制，将全表扫描查找进行了优化，将时间开销降低到了60%,空间开销降低到36%,并对SPEC2006,NIST,CVEs,Bugbench,9个APPs做了正确性、安全性、敏感性、兼容性、抗压力和性能开销做了评测，实验做的非常全面。
