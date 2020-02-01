@@ -287,3 +287,5 @@ sunkang ALL=(ALL) ALL
 格式化成ext4(U盘仅Linux识别):`sudo mkfs.ext4 /dev/sdb4`
 
 格式化成fat32(兼容性更好):`sudo mkfs.fat /dev/sdb4 -I`
+
+U盘重装win10系统：（1）windows下大白菜制作U盘启动盘(fat32)  （2）将Win10镜像放到U盘中  （3）U盘启动，进入winpe，重新格式化系统盘并安装新的win10系统；
