@@ -16,7 +16,7 @@ CSDN blog：[http://blog.csdn.net/u012717411](http://blog.csdn.net/u012717411)
 * [零壹与或非](http://blog.sciencenet.cn/home.php?mod=space&uid=102148) - 佟冬，导师，《处理器指令系统漫谈》、《要草吃的聪明羊》
 * [当我在扯淡](http://www.yinwang.org/) - 王垠，《完全用Linux工作》，推广TeX、三次中途退学博士学位
 * [快扶哀家去刷题](https://www.cnblogs.com/miaowTracy/) - 实验室喵喵大佬
-* [Mengjia Yan](http://myan8.web.engr.illinois.edu/research.html) - A PhD student doing research in hardware support for security @ UIUC.
+* [Mengjia Yan](http://myan8.web.engr.illinois.edu/) - 2019 Assistant Professor @ MIT, 2013 PhD @ UIUC ,2009 BS @ ZJU.(computer architecture and hardware security)
 * [Yikun Ban / 班义琨](http://www.banyikun.com) - 2019 PhD student @ UIUC , 2016 M.S. @ MPRC
 * [Yale N. Patt](http://users.ece.utexas.edu/~patt/) - Home page: Yale N. Patt @ The University of Texas at Austin
 * [Onur Mutlu](https://people.inf.ethz.ch/omutlu/) - Onur Mutlu @ ETH Zurich
