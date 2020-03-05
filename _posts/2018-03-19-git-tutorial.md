@@ -27,6 +27,7 @@ git config --global user.name "ajksunkang"
 git config --global user.email "ajksunkang@pku.edu.cn"
 git pull origin master //远程仓库有更新
 git clean -d -fx //暂存区域的文件修改全部删除
+git checkout -- file //可以将文件在工作区的修改全部撤销
 ```
 - [ ] 查看历史日志
 
