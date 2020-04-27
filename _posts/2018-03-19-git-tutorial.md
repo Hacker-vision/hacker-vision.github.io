@@ -14,8 +14,8 @@ excerpt: 汇总笔者在Linux开发过程中常用shell命令，以及git、vim�
 git init
 git add readme.txt
 git commit -m "wrote a readme file"
-git remote add origin https://github.com/Hacker-vision/itchat-master.git //using https
-git remote set-url origin https://github.com/Hacker-vision/itchat-master.git //using https
+git remote add origin https://github.com/Hacker-vision/itchat-master.git //初次传进git仓库时添加远程仓库地址,https稳定
+git remote set-url origin https://github.com/Hacker-vision/itchat-master.git //git clone别人仓库时修改远程仓库地址
 或git remote add origin git@github.com:Hacker-vision/leetcode.git //using ssh,需要本地生成秘钥，在SSH服务器上注册,优点是不用每次都输入密码
 git push -u origin master 
 ```
@@ -131,9 +131,28 @@ ln -s 源目录或文件 新链接文件
 （2）vim ~/.bash_profile
 source  ~/.bash_profile    //当前用户,不source的话下次重进此用户才生效（永久）
 （3）export PATH=$PATH:/some/path  //当前用户，退出终端失效
-
 ```
-
+---
+### GDB调试技巧
+```bash
+b:设置断点
+n/ni:执行源程序/汇编代码的一条语句，不进入
+s/si:执行源程序/汇编代码的一条语句，进入
+delete:删除所有断点
+bt:打印函数调用栈
+set args inp.in ：设置main函数传入参数
+layout：用于分割窗口，可以一边查看代码，一边测试。主要有以下几种用法：
+layout src：显示源代码窗口
+layout asm：显示汇编窗口
+layout regs：显示源代码/汇编和寄存器窗口
+layout split：显示源代码和汇编窗口
+layout next：显示下一个layout
+layout prev：显示上一个layout
+Ctrl + L：刷新窗口
+Ctrl + x，再按1：单窗口模式，显示一个窗口
+Ctrl + x，再按2：双窗口模式，显示两个窗口
+Ctrl + x，再按a：回到传统模式，即退出layout，回到执行layout之前的调试窗口。
+```
 
 ---
 ### 我的vim配置（~/.vimrc）
