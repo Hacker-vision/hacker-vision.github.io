@@ -61,8 +61,8 @@ trygit 15分钟教程：[https://try.github.io](https://try.github.io)
 - [ ] apt-get安装和卸载命令
 
 ```bash
-apt-get update                          //更新源
-apt-get upgrade                         //升级软件
+apt-get update                          //先更新源
+apt-get upgrade                         //再升级软件
 apt-get install software_name           //安装软件（推荐）
 apt-get purge(--purge remove) software_name  //卸载软件及其配置文件，保留依赖的安装包（推荐）
 =====
@@ -132,6 +132,18 @@ ln -s 源目录或文件 新链接文件
 source  ~/.bash_profile    //当前用户,不source的话下次重进此用户才生效（永久）
 （3）export PATH=$PATH:/some/path  //当前用户，退出终端失效
 ```
+
+- [ ] screen后台命令(即使终端结束，后台进程仍然运行)
+
+```bash
+screen                 //创建一个screen进程，分配一个ID
+screen -ls             //查看当前服务器后台的所有screen进程信息
+screen -r  22647       //进入ID为22647的screen(尝试恢复后台进程)
+screen -d  22647       //将指定的22647的screen离线，再通过-r重新恢复
+exit                   //kill当前的screen进行，并退出
+```
+
+
 ---
 ### GDB调试技巧
 ```bash
